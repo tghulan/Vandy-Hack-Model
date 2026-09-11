@@ -1,4 +1,4 @@
-## ============================================================
+ ## ============================================================
 ## Vanderbilt Football Prediction Model — Starter Script
 ## ============================================================
 ## Two parallel models on the same data:
@@ -7,6 +7,7 @@
 ##
 ## Data source: cfbfastR / collegefootballdata.com API (free key required)
 ## Get a key at: https://collegefootballdata.com/key
+## See README.md for how to store the API key as a system variable
 ## ============================================================
 
 ## ---- 0. Packages ----
@@ -19,8 +20,6 @@ library(tidyverse)
 library(brms)
 library(xgboost)
 library(Metrics)
-
-Sys.setenv(CFBD_API_KEY = "pXbncH+WkMnH9px/GlKNGAil4dVndZgWItFDIStoX8fVGGJwBXo+oTA7oy+bYpnF")
 
 ## ---- 1. Pull data across multiple seasons ----
 ## Use several years so the model has enough games to learn from.

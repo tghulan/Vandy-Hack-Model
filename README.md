@@ -32,3 +32,15 @@ For each matchup, the model produces:
 ## Status
 
 In development. Current focus is refining feature importance comparisons between the Bayesian and XGBoost approaches, and validating margin predictions against actual game results.
+
+## Initial requirements
+
+This program uses data from CollegeFootballData.com. API keys are free and available via https://collegefootballdata.com/key.
+
+After receiving an API key, perform these steps to secure it on your machine and make it available to the API queries:
+
+- Make sure the `usethis` library is installed (`install.packages('usethis')`)
+- In the R console, enter `usethis::edit_r_environ()`
+- Add this line (replace the holder text with your API key): `Sys.setenv(CFBD_API_KEY = "YOUR_KEY_HERE")`
+- Save the file and close it. 
+- Do a full restart/termination of the R session.
