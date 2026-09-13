@@ -20,7 +20,8 @@ library(brms)
 library(xgboost)
 library(Metrics)
 
-Sys.setenv(CFBD_API_KEY = "pXbncH+WkMnH9px/GlKNGAil4dVndZgWItFDIStoX8fVGGJwBXo+oTA7oy+bYpnF")
+## Set your CFBD API key in a .Renviron file (see README) — do not hardcode it here.
+## Sys.getenv("CFBD_API_KEY") will pick it up automatically once .Renviron is set.
 
 ## ---- 1. Pull data across multiple seasons ----
 ## Use several years so the model has enough games to learn from.
@@ -143,3 +144,4 @@ pull_season <- function(yr) {
 ##   - Swap season-level SP+ for week-by-week if you pull FPI instead
 ##   - Re-run predict_game() for each Vandy 2026 opponent
 ## ============================================================
+
